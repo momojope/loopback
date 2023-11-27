@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            FORMULAIRE D'AJOUT NOTE 
+        </div>
+        <div class="card-body">
+            <form  (ngSubmit)="send(f)"
+                  #f="ngForm"  >
+                <div class="form-group">
+                    <input 
+                    type="text" 
+                    class="form-control"
+                    name="title"
+                    [(ngModel)]="note.title"
+                    required
+                    placeholder="MATIERE">
+                </div>
+                <div class="form-group">
+                    <input 
+                    type="text" 
+                    class="form-control"
+                    name="description"
+                    [(ngModel)]="note.description"
+                    required
+                    placeholder="PROFESSEUR">
+                </div>
+                <div class="form-group">
+                    <input 
+                    type="text" 
+                    class="form-control"
+                    name="author"
+                    [(ngModel)]="note.author"
+                    required
+                    placeholder="NOTE">
+                </div>
+                <button type="submit" class="btn btn-success">
+                    send
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

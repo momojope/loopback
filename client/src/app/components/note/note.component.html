@@ -1,0 +1,22 @@
+<div class="container">
+
+            <div class="card">
+                <div class="card-header">
+                    {{notes.title}}
+                    <button (click)="settings()" type="button" class="btn btn-link">
+                        <span *ngIf="!opt">Modifier Formulaire</span>
+                        <span *ngIf="opt">Annuler</span>
+                    </button>
+                </div>
+                <div class="card-body">
+                    {{notes.description}}
+                    {{notes.author}}
+                </div>
+                <div class="card-footer">
+                    <span *ngIf="opt">
+                        <button [routerLink]="['/edit', notes.id]"  class="btn btn-outline-info btn-block">Modifier</button>
+                        <button (click)="delete(notes)" class="btn btn-outline-danger  btn-block">Supprimer</button>
+                    </span>
+                </div>
+            </div>
+</div>
